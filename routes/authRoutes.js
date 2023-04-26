@@ -118,7 +118,7 @@ router.post('/login', async(req, res) => {
             httpOnly: true,
             secure: true,
             sameSite:"none",
-            domain:"https://mern-frontend-henna.vercel.app/",
+            domain:"vercel.com",
             expiresIn: new Date().setTime(new Date().getTime() + process.env.COOKIE_EXPIRES * 3600 * 1000)
         })
 
