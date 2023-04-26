@@ -49,7 +49,7 @@ router.get('/products/:id/edit',async(req,res)=>{
 
 // updating product
 
-router.patch('/products/:id',isLoggedIn,async(req,res)=>{
+router.patch('/products/:id',async(req,res)=>{
 
 
  
