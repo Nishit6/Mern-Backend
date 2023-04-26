@@ -1,0 +1,16 @@
+{
+    "version": 2,
+    "name": "shop-app",
+    "builds": [
+        {
+            "src": "Index.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/Index.js"
+        }
+    ]
+}
