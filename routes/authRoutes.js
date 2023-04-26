@@ -118,7 +118,7 @@ router.post('/login', async(req, res) => {
             httpOnly: true,
             secure: true,
             sameSite:"none",
-            expiresIn: new Date().setTime(new Date().getTime() + process.env.COOKIE_EXPIRES * 3600 * 1000)
+            expiresIn: new Date().setTime(new Date().getTime() + 1 * 3600 * 1000)
         })
 
       

@@ -14,7 +14,7 @@ const productRoutes = require('./routes/productsRoute')
 
 // configuring mongoose
 
-mongoose.connect(process.env.MONGO_CLOUD, 
+mongoose.connect("mongodb+srv://nsgaur:nsgaur@cluster0.a5uj0jb.mongodb.net/usersDB?retryWrites=true&w=majority", 
 {
     useNewUrlParser: true,
     useUnifiedTopology: true,
