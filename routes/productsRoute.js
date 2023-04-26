@@ -40,7 +40,7 @@ router.get('/products/:id',isLoggedIn,async(req,res)=>{
 
 // editing particular product
 
-router.get('/products/:id/edit',isLoggedIn,async(req,res)=>{
+router.get('/products/:id/edit',async(req,res)=>{
 
    const product= await Product.findById(req.params.id);
 
