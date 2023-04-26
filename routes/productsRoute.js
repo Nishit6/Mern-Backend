@@ -6,6 +6,7 @@ const {isLoggedIn} = require('../middleware')
 
 // getting all products
 
+// disabling isLoggedIn while 
 
 
 router.get('/products',async(req,res)=>{
@@ -23,7 +24,7 @@ router.get('/products',async(req,res)=>{
 
 // Creating New Product
 
-router.post('/products',isLoggedIn,async(req,res)=>{
+router.post('/products',async(req,res)=>{
 
    console.log(req.body)
     const newProduct =await Product.create(req.body);
@@ -33,7 +34,7 @@ router.post('/products',isLoggedIn,async(req,res)=>{
 
 // Showing Particular Product
 
-router.get('/products/:id',isLoggedIn,async(req,res)=>{
+router.get('/products/:id',async(req,res)=>{
     const product = await Product.findById(req.params.id).populate('reviews');
     res.json(product);
 })
@@ -60,7 +61,7 @@ router.patch('/products/:id',async(req,res)=>{
 
 // deleting a product
 
-router.delete('/products/:id',isLoggedIn,async(req,res)=>{
+router.delete('/products/:id',async(req,res)=>{
 
      await Product.findByIdAndDelete(req.params.id);
 
