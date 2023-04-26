@@ -115,10 +115,11 @@ router.post('/login', async(req, res) => {
        
        
         res.cookie("token", token, {
-            httpOnly: false,
+            httpOnly: true,
             secure: true,
             sameSite:"none",
-            expiresIn: new Date().setTime(new Date().getTime() + 1 * 3600 * 1000)
+            domain:"https://mern-frontend-henna.vercel.app/",
+            expiresIn: new Date().setTime(new Date().getTime() + process.env.COOKIE_EXPIRES * 3600 * 1000)
         })
 
       
